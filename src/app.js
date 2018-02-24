@@ -1,17 +1,9 @@
 import React, { PureComponent } from 'react'
 import { injectGlobal } from 'styled-components'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Eventos from './screens/eventos'
+import EventosDashboard from './screens/eventos-dashboard'
 
 injectGlobal`
-  *{
-    font-family: ProximaNova;
-    text-rendering: optimizeLegibility;
-    -webkit-text-rendering: optimizeLegibility;
-    font-smoothing: antialiased;
-    -webkit-font-smoothing: antialiased;
-  }
-
   *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -30,7 +22,7 @@ class App extends PureComponent {
     return (
       <Router>
         <React.Fragment>
-          <Route exact path='/' component={Eventos} />
+          <Route exact path='/' component={EventosDashboard} />
         </React.Fragment>
       </Router>
     )
