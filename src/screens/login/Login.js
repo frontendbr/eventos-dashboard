@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import AuthenticationPanel from './AuthenticationPanel'
+import IssuePanel from './IssuePanel'
 
 const StyledPage = styled.div`
   display: flex;
@@ -12,6 +13,7 @@ const StyledPage = styled.div`
 const LoginScreen = () => (
   <StyledPage>
     <AuthenticationPanel />
+    <IssuePanel />
   </StyledPage>
 )
 
