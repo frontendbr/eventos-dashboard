@@ -1,7 +1,9 @@
 import React, { PureComponent } from 'react'
 import { injectGlobal } from 'styled-components'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import EventosDashboard from './screens/eventos-dashboard'
+
+import Login from './screens/login'
+import Dashboard from './screens/dashboard'
 
 injectGlobal`
   *, *::before, *::after {
@@ -18,11 +20,12 @@ injectGlobal`
 `
 
 class App extends PureComponent {
-  render() {
+  render () {
     return (
       <Router>
         <React.Fragment>
-          <Route exact path='/' component={EventosDashboard} />
+          <Route exact path='/' component={Login} />
+          <Route exact path='/dashboard' component={Dashboard} />
         </React.Fragment>
       </Router>
     )

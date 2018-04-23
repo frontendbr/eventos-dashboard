@@ -5,12 +5,8 @@ class EventosDashboard extends PureComponent {
   render () {
     return (
       <Layout>
-        <Header>
-
-        </Header>
-        <Content>
-
-        </Content>
+        <Header />
+        <Content />
       </Layout>
     )
   }
