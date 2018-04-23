@@ -19,12 +19,11 @@ const StyledButton = styled.button`
     flex-grow: 1;
     text-transform: uppercase;
     font-size: 1rem;
-    padding: 0 50px;
   }
 `
 
 const StyledFaGithub = styled(FaGithub)`
-  font-size: 3rem;
+  font-size: 2.5rem;
   background-color: ${p => (p.primary ? '#0072C8' : '#000')};
   padding: 6px;
   color: #fff;

@@ -11,6 +11,10 @@ const StyledAuthenticationPanel = styled.div`
   width: 30%;
   height: 100%;
   padding: 40px;
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
 `
 
 const StyledTitle = styled.h1`

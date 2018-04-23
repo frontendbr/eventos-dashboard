@@ -13,6 +13,10 @@ const StyledIssueContainer = styled.div`
   height: 100%;
   background-color: blue;
   padding: 80px;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
 `
 
 const StyledTitle = styled.p`
