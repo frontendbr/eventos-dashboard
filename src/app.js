@@ -15,6 +15,7 @@ injectGlobal`
   html,
   body,
   body > div {
+    font-family: 'Roboto', sans-serif;
     height: 100%;
   }
 `

@@ -1,6 +1,7 @@
 import React from 'react'
 import { text, bool } from 'prop-types'
 import styled from 'styled-components'
+import { FaGithub } from 'react-icons/lib/fa'
 
 const StyledButton = styled.button`
   display: flex;
@@ -10,7 +11,7 @@ const StyledButton = styled.button`
   border: 0;
   border-radius: 5px;
   overflow: hidden;
-  max-width: 400px;
+  max-width: 488px;
   background-color: ${p => (p.primary ? '#0081E2' : '#fff')};
   color: ${p => p.primary && '#fff'};
 
@@ -20,18 +21,18 @@ const StyledButton = styled.button`
     font-size: 1rem;
     padding: 0 50px;
   }
+`
 
-  > i {
-    font-size: 2rem;
-    background-color: ${p => (p.primary ? '#0072C8' : '#000')};
-    padding: 8px;
-    color: #fff;
-  }
+const StyledFaGithub = styled(FaGithub)`
+  font-size: 3rem;
+  background-color: ${p => (p.primary ? '#0072C8' : '#000')};
+  padding: 6px;
+  color: #fff;
 `
 
 const GitHubButton = ({ children, primary }) => (
   <StyledButton primary={primary}>
-    <i>GH</i>
+    <StyledFaGithub primary={primary} />
     <span>{children}</span>
   </StyledButton>
 )
