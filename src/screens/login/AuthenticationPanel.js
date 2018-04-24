@@ -10,7 +10,7 @@ const StyledAuthenticationPanel = styled.div`
   flex-direction: column;
   width: 30%;
   height: 100%;
-  padding: 40px;
+  padding: 24px 40px;
 
   @media (max-width: 576px) {
     width: 100%;
@@ -29,7 +29,7 @@ const StyledWelcome = styled.span`
 
 const AuthenticationPanel = () => (
   <StyledAuthenticationPanel>
-    <Logo style={{ marginBottom: '80px', marginLeft: '-34px' }} />
+    <Logo style={{ marginBottom: '80px', maxWidth: '100px' }} />
     <StyledTitle>Portal de eventos</StyledTitle>
     <StyledWelcome>
       Bem vindo, este é o <strong>portal de eventos</strong> do Front-end

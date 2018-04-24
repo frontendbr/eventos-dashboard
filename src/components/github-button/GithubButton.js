@@ -1,5 +1,5 @@
 import React from 'react'
-import { text, bool } from 'prop-types'
+import { string, bool } from 'prop-types'
 import styled from 'styled-components'
 import { FaGithub } from 'react-icons/lib/fa'
 
@@ -23,7 +23,7 @@ const StyledButton = styled.button`
 `
 
 const StyledFaGithub = styled(FaGithub)`
-  font-size: 2.5rem;
+  font-size: 3rem;
   background-color: ${p => (p.primary ? '#0072C8' : '#000')};
   padding: 6px;
   color: #fff;
@@ -37,7 +37,7 @@ const GitHubButton = ({ children, primary }) => (
 )
 
 GitHubButton.propTypes = {
-  children: text,
+  children: string,
   primary: bool
 }
 
