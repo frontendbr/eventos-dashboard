@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const StyledContent = styled.div`
   background-color: #f5f5f5;
-  padding: 10px 30px 30px 30px;
+  padding: 70px 80px 70px 80px;
   overflow-x: hidden;
   overflow-y: auto;
   height: calc(100% - 70px);
