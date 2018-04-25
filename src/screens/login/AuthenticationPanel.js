@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Logo from '../../components/logo'
-import GithubButton from '../../components/github-button'
+import Logo from 'components/logo'
+import GithubButton from 'components/github-button'
 
 const StyledAuthenticationPanel = styled.div`
   box-sizing: border-box;

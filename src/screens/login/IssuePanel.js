@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import GithubButton from '../../components/github-button'
+import GithubButton from 'components/github-button'
 
 const StyledIssueContainer = styled.div`
   box-sizing: border-box;
@@ -20,7 +20,7 @@ const StyledIssueContainer = styled.div`
 `
 
 const StyledTitle = styled.p`
-  font-size: 4rem;
+  font-size: 3.5rem;
   padding: 10px 0;
   text-shadow: 1px 1px 2px #2d6da7;
 `

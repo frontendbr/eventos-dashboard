@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import Layout, { Header, Content } from '../../components/layout'
+import Layout, { Header, Content } from 'components/layout'
 
 class EventosDashboard extends PureComponent {
   render () {
