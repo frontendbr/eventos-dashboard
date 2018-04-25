@@ -1,19 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { desktop, tablet } from 'utils/breakpoints'
 import Logo from 'components/logo'
 import GithubButton from 'components/github-button'
 
 const StyledAuthenticationPanel = styled.div`
-  box-sizing: border-box;
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
-  width: 30%;
   height: 100%;
   padding: 24px 40px;
+  width: 100%;
 
-  @media (max-width: 576px) {
-    width: 100%;
+  @media (min-width: ${tablet}){
+    width:50%;
+  }
+
+  @media (min-width: ${desktop}){
+    width:30%;
   }
 `
 

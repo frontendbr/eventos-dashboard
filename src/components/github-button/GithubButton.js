@@ -25,14 +25,14 @@ const StyledButton = styled.button`
 
 const StyledFaGithub = styled(FaGithub)`
   font-size: 3rem;
-  background-color: ${p => (p.primary ? '#0072C8' : '#2d2d2d')};
+  background-color: ${p => (p.primary === 'true' ? '#0072C8' : '#2d2d2d')};
   padding: 6px;
   color: #fff;
 `
 
 const GitHubButton = ({ children, primary }) => (
   <StyledButton primary={primary}>
-    <StyledFaGithub primary={primary} />
+    <StyledFaGithub primary={primary.toString()} />
     <span>{children}</span>
   </StyledButton>
 )
