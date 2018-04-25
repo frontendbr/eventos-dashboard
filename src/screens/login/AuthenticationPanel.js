@@ -35,7 +35,7 @@ const AuthenticationPanel = () => (
       Bem vindo, este é o <strong>portal de eventos</strong> do Front-end
       Brasil, realize o login para continuar.
     </StyledWelcome>
-    <GithubButton primary>Login com gitgub</GithubButton>
+    <GithubButton primary>Login com github</GithubButton>
   </StyledAuthenticationPanel>
 )
 

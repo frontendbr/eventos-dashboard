@@ -12,10 +12,19 @@ injectGlobal`
     padding: 0;
   }
 
+  div,
+  button,
+  input,
+  span,
+  p,
+  li,
+  select{
+    font-family: 'Open Sans', sans-serif;
+  }
+
   html,
   body,
   body > div {
-    font-family: 'Open Sans', sans-serif;
     height: 100%;
   }
 `

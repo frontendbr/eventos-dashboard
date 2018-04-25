@@ -5,6 +5,7 @@ import { FaGithub } from 'react-icons/lib/fa'
 
 const StyledButton = styled.button`
   display: flex;
+  cursor: pointer;
   align-items: center;
   justify-content: center;
   padding: 0;
@@ -13,7 +14,7 @@ const StyledButton = styled.button`
   overflow: hidden;
   max-width: 488px;
   background-color: ${p => (p.primary ? '#0081E2' : '#fff')};
-  color: ${p => p.primary && '#fff'};
+  color: ${p => p.primary ? '#fff' : '#2d2d2d'};
 
   > span {
     flex-grow: 1;
@@ -24,7 +25,7 @@ const StyledButton = styled.button`
 
 const StyledFaGithub = styled(FaGithub)`
   font-size: 3rem;
-  background-color: ${p => (p.primary ? '#0072C8' : '#000')};
+  background-color: ${p => (p.primary ? '#0072C8' : '#2d2d2d')};
   padding: 6px;
   color: #fff;
 `
