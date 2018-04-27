@@ -8,11 +8,12 @@ const StyledEvents = styled.div`
   grid-row-gap: 15px;
 
   /* 4 colunas */
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
 `
 
 const Events = () => (
   <StyledEvents>
+    <EventCard />
     <EventCard />
     <EventCard />
     <EventCard />

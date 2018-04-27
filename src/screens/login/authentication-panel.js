@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { desktop, tablet } from 'utils/breakpoints'
-import Logo from 'components/logo'
+import { Logo } from 'components'
 import GithubButton from 'components/github-button'
 
 const StyledAuthenticationPanel = styled.div`
@@ -24,6 +24,7 @@ const StyledAuthenticationPanel = styled.div`
 
 const StyledTitle = styled.h1`
   display: block;
+  margin-top: 80px;
 `
 
 const StyledWelcome = styled.span`
@@ -34,7 +35,7 @@ const StyledWelcome = styled.span`
 
 const AuthenticationPanel = () => (
   <StyledAuthenticationPanel>
-    <Logo style={{ marginBottom: '80px', maxWidth: '100px' }} />
+    <Logo />
     <StyledTitle>Portal de eventos</StyledTitle>
     <StyledWelcome>
       Bem vindo, este é o <strong>portal de eventos</strong> do Front-end

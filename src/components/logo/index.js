@@ -1,18 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import LogoSVG from './logo-600px--color.svg'
+import LogoSVG from './logo.svg'
 
 const StyledLogo = styled.img`
-  width: 200px;
-  height: 200px;
+  max-width:100px;
 `
 
-const Logo = ({ ...props }) => (
+const Logo = ({ className }) => (
   <StyledLogo
-    src={LogoSVG} alt='FrontEndBR'
-    {...props}
+    className={className}
+    src={LogoSVG} alt='Logo Front-End Brasil'
   />
 )
 
-export default Logo
+export { Logo }

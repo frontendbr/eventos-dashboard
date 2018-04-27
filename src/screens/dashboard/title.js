@@ -14,7 +14,7 @@ const StyledTitle = styled.div`
   }
 
   .sub-title {
-    font-size: 14px;
+    font-size: 16px;
     color: #9f9f9f;
     margin-left: 2px;
   }
