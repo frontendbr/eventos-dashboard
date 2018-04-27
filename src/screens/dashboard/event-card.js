@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { IconButton } from 'components'
+import { IconButton, Tooltip } from 'components'
 
 const StyledEventCard = styled.div`
   width: 100%;
@@ -22,18 +22,26 @@ const StyledEventCard = styled.div`
 const EventCard = () => (
   <StyledEventCard>
     <div className='footer'>
-      <IconButton
-        icon='switch'
-      />
-      <IconButton
-        icon='eye'
-      />
-      <IconButton
-        icon='edit'
-      />
-      <IconButton
-        icon='trash'
-      />
+      <Tooltip title='Marcar evento'>
+        <IconButton
+          icon='switch'
+        />
+      </Tooltip>
+      <Tooltip title='Visualizar evento'>
+        <IconButton
+          icon='eye'
+        />
+      </Tooltip>
+      <Tooltip title='Editar evento'>
+        <IconButton
+          icon='edit'
+        />
+      </Tooltip>
+      <Tooltip title='Excluir evento'>
+        <IconButton
+          icon='trash'
+        />
+      </Tooltip>
     </div>
   </StyledEventCard>
 )
