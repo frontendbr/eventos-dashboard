@@ -44,7 +44,7 @@ const EventCard = () => (
   <StyledEventCard>
     <div className='header'>
       <span className='title'>Front in Sampa 2018</span>
-      <span class='date'>28 Jun 2018</span>
+      <span className='date'>28 Jun 2018</span>
     </div>
     <div className='body'>
       O Front in Sampa 2018 acontecerá no Hotel IBIS, no dia 28 de junho de 2018,
