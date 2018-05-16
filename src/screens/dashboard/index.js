@@ -4,7 +4,7 @@ import Layout, { Header, Content } from 'components/layout'
 import styled from 'styled-components'
 import { Logo } from 'components'
 import Title from './title'
-import Filtro from './filtro'
+import Filter from './filter'
 import UserDetails from './user-details'
 import Events from './events'
 
@@ -29,7 +29,7 @@ class EventosDashboard extends PureComponent {
         <Content>
           <StyledContentHeader>
             <Title />
-            <Filtro />
+            <Filter />
           </StyledContentHeader>
           <Events />
         </Content>

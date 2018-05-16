@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import { blue, gray } from 'utils/colors'
+import { blueLight, gray } from 'utils/colors'
+import Dropdown from './dropdown'
 import FaIcon from '@fortawesome/react-fontawesome'
 import faSlidersH from '@fortawesome/fontawesome-free-solid/faSlidersH'
 import styled from 'styled-components'
 
-const StyledFiltro = styled.div`
+const StyledFilter = styled.div`
   border: solid 1px ${gray};
   width: 200px;
   border-radius: 5px;
@@ -12,11 +13,12 @@ const StyledFiltro = styled.div`
   display:flex;
   justify-content: space-between;
   align-items:center;
+  position:relative;
 
   &.active{
-    border-color:${blue};
+    border-color:${blueLight};
     >.label-filter{
-      color:${blue};
+      color:${blueLight};
     }
   }
 
@@ -29,7 +31,7 @@ const StyledFiltro = styled.div`
   }
 `
 
-class Filtro extends Component {
+class Filter extends Component {
   constructor () {
     super()
     this.state = {
@@ -43,16 +45,17 @@ class Filtro extends Component {
 
   render () {
     const className = this.state.visible ? 'active' : ''
-    const colorIcon = this.state.visible ? blue : gray
+    const colorIcon = this.state.visible ? blueLight : gray
     
     return (
-      <StyledFiltro className={className}>
+      <StyledFilter className={className}>
         <span className='label-filter'>Filtro</span>
         <FaIcon className='icon-filter' onClick={this.toggle} size='lg' icon={faSlidersH} color={colorIcon} />
-      </StyledFiltro>
+        <Dropdown visible={this.state.visible} />
+      </StyledFilter>
     )
     
   }
 }
 
-export default Filtro
+export default Filter
