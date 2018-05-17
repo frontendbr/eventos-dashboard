@@ -7,6 +7,7 @@ import faCheck from '@fortawesome/fontawesome-free-solid/faCheck'
 const StyledLabel = styled.label`
   display: flex;
   align-items: center;
+
   >.real-checkbox{
     cursor:pointer;
     display: flex;
@@ -17,14 +18,17 @@ const StyledLabel = styled.label`
     width: 18px;
     height: 18px;
   }
+  
   .label {
     color:${gray};
     font-size: 14px;
     margin-left: 10px;
   }
+  
   >input:checked + .real-checkbox {
     background: ${blue};
   }
+  
   >input {
     display: none;
   }
