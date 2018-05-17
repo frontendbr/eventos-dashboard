@@ -35,7 +35,7 @@ class Filter extends Component {
   constructor () {
     super()
     this.state = {
-      visible: false
+      visible: true
     }
   }
 
