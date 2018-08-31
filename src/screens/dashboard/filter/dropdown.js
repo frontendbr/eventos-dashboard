@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { bool, func } from 'prop-types'
 
 const StyledDropdown = styled.div`
   position:absolute;
@@ -35,5 +36,10 @@ const Dropdown = ({ visible, children }) => (
     {children}
   </StyledDropdown>
 )
+
+Dropdown.propTypes = {
+  visible: bool,
+  children: func
+}
 
 export default Dropdown

@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import { string, func } from 'prop-types'
 import { gray, grayLight } from 'utils/colors';
 
 const StyledRow = styled.div`
     display:flex;
+    align-items:center;
     padding: 15px 0;
     border-bottom: solid 1px ${grayLight};
 
@@ -20,5 +22,10 @@ const Row = ({ children, title }) => (
         {children}
     </StyledRow>
 )
+
+Row.propTypes = {
+    title: string,
+    children: func
+}
 
 export default Row

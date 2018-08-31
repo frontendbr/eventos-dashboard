@@ -3,12 +3,11 @@ import FaIcon from '@fortawesome/react-fontawesome'
 import faSlidersH from '@fortawesome/fontawesome-free-solid/faSlidersH'
 import styled from 'styled-components'
 
-import { Checkbox } from 'components'
+import { Checkbox, Input } from 'components'
 import { blueLight, gray } from 'utils/colors'
 
 import Dropdown from './dropdown'
 import Row from './row'
-
 const StyledFilter = styled.div`
   border: solid 1px ${gray};
   width: 200px;
@@ -75,6 +74,10 @@ class Filter extends Component {
           </Row>
 
           <Row title='Data'>
+            <div className="input-container">
+              <Input type='date' />
+            </div>
+            <Input type='date' />
           </Row>
 
         </Dropdown>
