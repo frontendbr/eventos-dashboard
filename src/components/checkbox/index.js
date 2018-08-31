@@ -14,7 +14,7 @@ const StyledLabel = styled.label`
     align-items: center;
     justify-content: center;
     border-radius: 2px;    
-    border: solid 2px ${blue};
+    border: solid 1px ${blue};
     width: 18px;
     height: 18px;
   }

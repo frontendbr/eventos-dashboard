@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { string, func } from 'prop-types'
+import { string, array } from 'prop-types'
 import { gray, grayLight } from 'utils/colors';
 
 const StyledRow = styled.div`
@@ -25,7 +25,7 @@ const Row = ({ children, title }) => (
 
 Row.propTypes = {
     title: string,
-    children: func
+    children: array
 }
 
 export default Row

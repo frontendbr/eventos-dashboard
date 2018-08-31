@@ -1,49 +1,20 @@
 import React, { Component } from 'react'
 import FaIcon from '@fortawesome/react-fontawesome'
 import faSlidersH from '@fortawesome/fontawesome-free-solid/faSlidersH'
-import styled from 'styled-components'
-
-import { Checkbox, Input } from 'components'
 import { blueLight, gray } from 'utils/colors'
+
+import { Checkbox, Input, Button } from 'components'
+
+import { ButtonsContainer, InputContainer, LabelFilter, StyledFilter } from './filter.styled'
 
 import Dropdown from './dropdown'
 import Row from './row'
-const StyledFilter = styled.div`
-  border: solid 1px ${gray};
-  width: 200px;
-  border-radius: 5px;
-  padding: 15px 15px;
-  display:flex;
-  justify-content: space-between;
-  align-items:center;
-  position:relative;
-
-  &.active{
-    border-color:${blueLight};
-    >.label-filter{
-      color:${blueLight};
-    }
-  }
-
-  >.label-filter{
-    color:${gray};
-  }
-
-  >.icon-filter{
-    cursor:pointer;
-  }
-
-  .input-container{
-    padding-right: 15px;
-  }
-`
 
 class Filter extends Component {
   constructor () {
     super()
-    this.state = {
-      visible: true
-    }
+
+    this.state = { visible: false }
   }
 
   toggle = () => {
@@ -56,29 +27,46 @@ class Filter extends Component {
 
     return (
       <StyledFilter className={className}>
-        <span className='label-filter'>Filtro</span>
+
+        <LabelFilter>Filtro</LabelFilter>
+
         <FaIcon className='icon-filter' onClick={this.toggle} size='lg' icon={faSlidersH} color={colorIcon} />
 
         <Dropdown visible={this.state.visible} >
 
           <Row title='Status'>
 
-            <div className='input-container'>
+            <InputContainer>
               <Checkbox label='Aprovado' />
-            </div>
+            </InputContainer>
 
-            <div className='input-container'>
+            <InputContainer>
               <Checkbox label='Reprovado' />
-            </div>
+            </InputContainer>
 
           </Row>
 
           <Row title='Data'>
-            <div className="input-container">
+
+            <InputContainer>
               <Input type='date' />
-            </div>
-            <Input type='date' />
+            </InputContainer>
+
+            <InputContainer>
+              <Input type='date' />
+            </InputContainer>
+
           </Row>
+
+          <ButtonsContainer>
+            <Button label='Limpar todos os filtros' is='danger' />
+
+            <div className="primary-container">
+              <Button label='Cancelar' is='secondary' />
+              <Button label='Aplicar' is='primary' />
+            </div>
+
+          </ButtonsContainer>
 
         </Dropdown>
 
