@@ -1,16 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Checkbox } from 'components'
 
 const StyledDropdown = styled.div`
   position:absolute;
-  width:350px;
-  padding: 70px;
+  padding: 5px 25px;
   right:-2px;
   background:white;
   border: solid 2px #e6e6e6;
   border-radius: 4px;
   top: 4rem;
+
   &.open{
     display:block;
   }
@@ -31,9 +30,9 @@ const StyledDropdown = styled.div`
   }
 `
 
-const Dropdown = ({ visible }) => (
+const Dropdown = ({ visible, children }) => (
   <StyledDropdown className={visible ? 'visible' : 'hidden'}>
-    <Checkbox label='Aprovado' />
+    {children}
   </StyledDropdown>
 )
 

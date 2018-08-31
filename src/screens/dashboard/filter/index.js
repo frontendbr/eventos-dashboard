@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
-import { blueLight, gray } from 'utils/colors'
-import Dropdown from './dropdown'
 import FaIcon from '@fortawesome/react-fontawesome'
 import faSlidersH from '@fortawesome/fontawesome-free-solid/faSlidersH'
 import styled from 'styled-components'
+
+import { Checkbox } from 'components'
+import { blueLight, gray } from 'utils/colors'
+
+import Dropdown from './dropdown'
+import Row from './row'
 
 const StyledFilter = styled.div`
   border: solid 1px ${gray};
@@ -29,6 +33,10 @@ const StyledFilter = styled.div`
   >.icon-filter{
     cursor:pointer;
   }
+
+  .input-container{
+    padding-right: 15px;
+  }
 `
 
 class Filter extends Component {
@@ -46,15 +54,34 @@ class Filter extends Component {
   render () {
     const className = this.state.visible ? 'active' : ''
     const colorIcon = this.state.visible ? blueLight : gray
-    
+
     return (
       <StyledFilter className={className}>
         <span className='label-filter'>Filtro</span>
         <FaIcon className='icon-filter' onClick={this.toggle} size='lg' icon={faSlidersH} color={colorIcon} />
-        <Dropdown visible={this.state.visible} />
+
+        <Dropdown visible={this.state.visible} >
+
+          <Row title='Status'>
+
+            <div className='input-container'>
+              <Checkbox label='Aprovado' />
+            </div>
+
+            <div className='input-container'>
+              <Checkbox label='Reprovado' />
+            </div>
+
+          </Row>
+
+          <Row title='Data'>
+          </Row>
+
+        </Dropdown>
+
       </StyledFilter>
     )
-    
+
   }
 }
 
