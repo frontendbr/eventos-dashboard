@@ -6,7 +6,6 @@ import { blueLight, gray } from 'utils/colors'
 import { Checkbox, Input, Button } from 'components'
 
 import { ButtonsContainer, InputContainer, LabelFilter, StyledFilter } from './filter.styled'
-
 import Dropdown from './dropdown'
 import Row from './row'
 
@@ -62,7 +61,7 @@ class Filter extends Component {
             <Button label='Limpar todos os filtros' is='danger' />
 
             <div className="primary-container">
-              <Button label='Cancelar' is='secondary' />
+              <Button onClick={this.toggle} label='Cancelar' is='secondary' />
               <Button label='Aplicar' is='primary' />
             </div>
 

@@ -12,7 +12,7 @@ const StyledButton = styled.button`
     font-size: 14px;
     font-weight: 500;
     cursor:pointer;
-    
+
     &.danger {
         color: ${red};
     }
@@ -26,8 +26,8 @@ const StyledButton = styled.button`
     }
 `
 
-const Button = ({ label, is }) => (
-    <StyledButton className={is} >{label}</StyledButton>
+const Button = ({ label, is, ...rest }) => (
+    <StyledButton {...rest} className={is} >{label}</StyledButton>
 )
 
 Button.propTypes = {

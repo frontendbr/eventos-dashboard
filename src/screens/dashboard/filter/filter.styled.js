@@ -14,13 +14,13 @@ export const StyledFilter = styled.div`
 
     &.active{
     border-color:${blueLight};
-    >.label-filter{
-        color:${blueLight};
-    }
+        >.label-filter{
+            color:${blueLight};
+        }
     }
 
     >.icon-filter{
-    cursor:pointer;
+      cursor:pointer;
     }
 `
 
