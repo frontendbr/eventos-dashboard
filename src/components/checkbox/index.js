@@ -3,7 +3,7 @@ import { blue, gray } from 'utils/colors'
 import styled from 'styled-components'
 import FaIcon from '@fortawesome/react-fontawesome'
 import faCheck from '@fortawesome/fontawesome-free-solid/faCheck'
-import { string, func, object } from 'prop-types'
+import { string, func } from 'prop-types'
 
 const StyledLabel = styled.label`
   display: flex;
