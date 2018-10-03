@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { optionalNode, string } from 'prop-types'
 
 const StyledTooltip = styled.div`
   position: relative;
@@ -42,5 +43,11 @@ const Tooltip = ({ children, title }) => (
     {children}
   </StyledTooltip>
 )
+
+
+Tooltip.propTypes = {
+  title: string,
+  children: optionalNode
+}
 
 export { Tooltip }

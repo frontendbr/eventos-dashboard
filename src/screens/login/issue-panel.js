@@ -42,8 +42,8 @@ const IssueContainer = () => (
   <StyledIssueContainer>
     <span>Última issue no fórum:</span>
     <StyledTitle>
-      Seguindo o "mobile-first concept", é ideal dar preferência para
-      'max-width' ou 'min-width' no css?
+      Seguindo o &quot;mobile-first concept&quot;, é ideal dar preferência para
+      &apos;max-width&apos; ou &apos;min-width&apos; no css?
     </StyledTitle>
 
     <GithubButton>Ler issue no github</GithubButton>
