@@ -1,4 +1,5 @@
 import React from 'react'
+import { string, object } from 'prop-types'
 import styled from 'styled-components'
 import { IconButton, Tooltip } from 'components'
 
@@ -40,15 +41,16 @@ const StyledEventCard = styled.div`
   }
 `
 
-const EventCard = () => (
+
+
+const EventCard = ({ title, shortDescription, date }) => (
   <StyledEventCard>
     <div className='header'>
-      <span className='title'>Front in Sampa 2018</span>
-      <span className='date'>28 Jun 2018</span>
+      <span className='title'>{ title }</span>
+      <span className='date'>{date.day} de {date.month}`</span>
     </div>
     <div className='body'>
-      O Front in Sampa 2018 acontecerá no Hotel IBIS, no dia 28 de junho de 2018,
-      trazendo diversas palestras que contribuirão na sua carreira de dev.
+      { shortDescription }
     </div>
     <div className='footer'>
       <Tooltip title='Marcar evento'>
@@ -74,5 +76,18 @@ const EventCard = () => (
     </div>
   </StyledEventCard>
 )
+
+
+EventCard.propTypes = {
+  title: string,
+  shortDescription: string,
+  date: object
+}
+
+EventCard.defaultProps = {
+  title: '',
+  shortDescription: 'Nenhuma descrição fornecida :/',
+  date: {}
+}
 
 export default EventCard

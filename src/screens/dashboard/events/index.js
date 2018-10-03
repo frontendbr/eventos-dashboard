@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import EventCard from './event-card'
 import { desktop, tablet } from 'utils/breakpoints'
+import { listEvents } from 'api'
 
 const StyledEvents = styled.div`
   display: grid;
@@ -15,14 +16,23 @@ const StyledEvents = styled.div`
     grid-template-columns: auto auto auto auto;
   }
 `
+class Events extends Component {
+  state = {
+    events: []
+  }
 
-const Events = () => (
-  <StyledEvents>
-    <EventCard />
-    <EventCard />
-    <EventCard />
-    <EventCard />
-  </StyledEvents>
-)
+  componentDidMount(){
+    listEvents()
+    .then(events => this.setState({ events }))
+  }
+
+  render(){
+    return (
+      <StyledEvents>
+        {this.state.events.map(event => <EventCard {... event} />)}
+      </StyledEvents>
+    )
+  }
+}
 
 export default Events
