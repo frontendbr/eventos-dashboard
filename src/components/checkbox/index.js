@@ -3,6 +3,7 @@ import { blue, gray } from 'utils/colors'
 import styled from 'styled-components'
 import FaIcon from '@fortawesome/react-fontawesome'
 import faCheck from '@fortawesome/fontawesome-free-solid/faCheck'
+import { string, func, object } from 'prop-types'
 
 const StyledLabel = styled.label`
   display: flex;
@@ -49,5 +50,13 @@ const Checkbox = ({ label, onChange, name, id, ...rest }) => (
     {label && <span className='label'>{label}</span>}
   </StyledLabel>
 )
+
+
+Checkbox.propTypes = {
+  label: string,
+  onChange: func,
+  name: string,
+  id: string
+}
 
 export { Checkbox }
