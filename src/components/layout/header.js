@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { tablet } from 'utils/breakpoints'
+import { optionalNode } from 'prop-types'
 
 const StyledHeader = styled.div`
   background-color: white;
@@ -27,5 +28,10 @@ const Header = ({ children }) => (
     {children}
   </StyledHeader>
 )
+
+
+Header.propTypes = {
+  children: optionalNode
+}
 
 export { Header }

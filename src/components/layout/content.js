@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { desktop, tablet } from 'utils/breakpoints'
+import { optionalNode } from 'prop-types'
 
 const StyledContent = styled.div`
   background-color: #f5f5f5;
@@ -27,5 +28,10 @@ const Content = ({ children }) => (
     {children}
   </StyledContent>
 )
+
+
+Content.propTypes = {
+  children: optionalNode
+}
 
 export { Content }

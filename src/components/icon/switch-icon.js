@@ -1,4 +1,5 @@
 import React from 'react'
+import { string } from 'prop-types'
 
 const SwitchIcon = ({ color }) => (
   <svg
@@ -14,5 +15,10 @@ const SwitchIcon = ({ color }) => (
       <circle cx='8' cy='12' r='3' />
     </svg>
 )
+
+
+SwitchIcon.propTypes = {
+  color: string
+}
 
 export default SwitchIcon

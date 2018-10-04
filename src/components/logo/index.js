@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { string } from 'prop-types'
 
 import LogoSVG from './logo.svg'
 
@@ -13,5 +14,10 @@ const Logo = ({ className }) => (
     src={LogoSVG} alt='Logo Front-End Brasil'
   />
 )
+
+
+Logo.propTypes = {
+  className: string
+}
 
 export { Logo }
