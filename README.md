@@ -1,4 +1,7 @@
 # Gerenciando os melhores eventos
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/frontendbr/eventos-dashboard.svg)](https://greenkeeper.io/)
+
 Olá a todos! \o/
 
 O Objetivo deste projeto é criar um dashboard para gerenciar os eventos que são exibidos na page de eventos do FrontEndBR que você pode conferir aqui: <http://frontendbr.com.br/eventos>
