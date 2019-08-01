@@ -4,17 +4,17 @@ import styled from 'styled-components'
 import AuthenticationPanel from './authentication-panel'
 import IssuePanel from './issue-panel'
 
-const StyledPage = styled.div`
+const StyledLogin = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
 `
 
 const Login = () => (
-  <StyledPage>
+  <StyledLogin>
     <AuthenticationPanel />
     <IssuePanel />
-  </StyledPage>
+  </StyledLogin>
 )
 
 export default Login

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import FaIcon from '@fortawesome/react-fontawesome'
-import faSlidersH from '@fortawesome/fontawesome-free-solid/faSlidersH'
-import { blueLight, gray } from 'utils/colors'
+// import FaIcon from '@fortawesome/react-fontawesome'
+// import faSlidersH from '@fortawesome/fontawesome-free-solid/faSlidersH'
+// import { blueLight, gray } from 'utils/colors'
 
 import { Checkbox, Input, Button } from 'components'
 
@@ -22,14 +22,14 @@ class Filter extends Component {
 
   render () {
     const className = this.state.visible ? 'active' : ''
-    const colorIcon = this.state.visible ? blueLight : gray
+    // const colorIcon = this.state.visible ? blueLight : gray
 
     return (
       <StyledFilter className={className}>
 
         <LabelFilter>Filtro</LabelFilter>
 
-        <FaIcon className='icon-filter' onClick={this.toggle} size='lg' icon={faSlidersH} color={colorIcon} />
+        {/* <FaIcon className='icon-filter' onClick={this.toggle} size='lg' icon={faSlidersH} color={colorIcon} /> */}
 
         <Dropdown visible={this.state.visible} >
 
