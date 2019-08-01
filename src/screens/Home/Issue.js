@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { tablet, desktop } from 'utils/breakpoints'
-import GithubButton from 'components/github-button'
+import { tablet, desktop } from '@/utils/breakpoints'
 
-const StyledIssueContainer = styled.div`
+import { GithubButton } from '@/components'
+
+const StyledIssue = styled.div`
   display: none;
   box-sizing: border-box;
   color: #fff;
@@ -38,8 +39,8 @@ const StyledTitle = styled.p`
 
 `
 
-const IssueContainer = () => (
-  <StyledIssueContainer>
+const Issue = () => (
+  <StyledIssue>
     <span>Última issue no fórum:</span>
     <StyledTitle>
       Seguindo o &quot;mobile-first concept&quot;, é ideal dar preferência para
@@ -47,7 +48,7 @@ const IssueContainer = () => (
     </StyledTitle>
 
     <GithubButton>Ler issue no github</GithubButton>
-  </StyledIssueContainer>
+  </StyledIssue>
 )
 
-export default IssueContainer
+export default Issue

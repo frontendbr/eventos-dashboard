@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledDiv = styled.div`
-  display:flex; 
+  display:flex;
   align-items:center;
   >.user-img{
       width:35px;
@@ -20,8 +20,16 @@ const StyledDiv = styled.div`
 
 const UserDetails = () => (
   <StyledDiv>
-    <img className='user-img' src='https://avatars3.githubusercontent.com/u/3642745?s=460&v=4' alt='Foto de Perfil' />
-    <span className='user-name' >Olá, Marcel</span>
+    <img
+      className='user-img'
+      src='https://avatars3.githubusercontent.com/u/1?s=460&v=4'
+      alt='Foto de Perfil'
+    />
+    <span
+      className='user-name'
+    >
+      Olá, User
+    </span>
   </StyledDiv>
 )
 

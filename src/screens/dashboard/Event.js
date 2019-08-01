@@ -1,9 +1,10 @@
 import React from 'react'
-import { string, object } from 'prop-types'
+import { string, object, shape } from 'prop-types'
 import styled from 'styled-components'
-import { IconButton, Tooltip } from 'components'
 
-const StyledEventCard = styled.div`
+import { IconButton, Tooltip } from '@/style-guide'
+
+const StyledEvent = styled.div`
   width: 100%;
   background-color: #ffffff;
   border-radius: 4px;
@@ -22,12 +23,12 @@ const StyledEventCard = styled.div`
     }
     >.date{
       color:#dbdbdb;
-      padding: 5px 0;      
+      padding: 5px 0;
     }
   }
 
   >.body{
-    padding: 15px 0;          
+    padding: 15px 0;
     display:flex;
     flex:1;
     color:#acacac;
@@ -41,16 +42,18 @@ const StyledEventCard = styled.div`
   }
 `
 
-
-
-const EventCard = ({ title, shortDescription, date }) => (
-  <StyledEventCard>
+const Event = ({ event }) => (
+  <StyledEvent>
     <div className='header'>
-      <span className='title'>{ title }</span>
-      <span className='date'>{date.day} de {date.month}`</span>
+      <span className='title'>
+        {event.title}
+      </span>
+      <span className='date'>
+        {event.date.day} de {event.date.month}
+      </span>
     </div>
     <div className='body'>
-      { shortDescription }
+      {event.shortDescription}
     </div>
     <div className='footer'>
       <Tooltip title='Marcar evento'>
@@ -74,20 +77,22 @@ const EventCard = ({ title, shortDescription, date }) => (
         />
       </Tooltip>
     </div>
-  </StyledEventCard>
+  </StyledEvent>
 )
 
 
-EventCard.propTypes = {
-  title: string,
-  shortDescription: string,
-  date: object
+Event.propTypes = {
+  event: shape({
+    title: string,
+    shortDescription: string,
+    date: object
+  })
 }
 
-EventCard.defaultProps = {
+Event.defaultProps = {
   title: '',
   shortDescription: 'Nenhuma descrição fornecida :/',
   date: {}
 }
 
-export default EventCard
+export default Event

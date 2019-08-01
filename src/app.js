@@ -3,15 +3,15 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import { GlobalStyle } from '@/style-guide'
 
-import Login from '@/screens/login'
-import Dashboard from '@/screens/dashboard'
+import Home from '@/screens/Home'
+import Dashboard from '@/screens/Dashboard'
 
 const App = () => (
   <>
     <GlobalStyle />
     <Router>
       <Switch>
-        <Route exact path='/' component={Login} />
+        <Route exact path='/' component={Home} />
         <Route exact path='/dashboard' component={Dashboard} />
       </Switch>
     </Router>

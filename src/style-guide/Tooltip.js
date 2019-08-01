@@ -10,7 +10,7 @@ const StyledTooltip = styled.div`
     position:absolute;
     top:-35px;
     width: 150px;
-    left: 50%; 
+    left: 50%;
     margin-left:-75px;
     color:white;
     text-align:center;
@@ -31,7 +31,7 @@ const StyledTooltip = styled.div`
 
   &:hover{
     >span{
-      transform:scale(1);      
+      transform:scale(1);
       display:block;
     }
   }
@@ -50,4 +50,4 @@ Tooltip.propTypes = {
   children: optionalNode
 }
 
-export { Tooltip }
+export default Tooltip

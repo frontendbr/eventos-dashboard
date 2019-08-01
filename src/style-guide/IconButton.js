@@ -1,7 +1,8 @@
 import React from 'react'
 import { string, func } from 'prop-types'
 import styled from 'styled-components'
-import { Icon } from 'components'
+
+import Icon from './Icon'
 
 const StyledButton = styled.button`
   background-color: transparent;
@@ -25,4 +26,4 @@ IconButton.propTypes = {
   onClick: func
 }
 
-export { IconButton }
+export default IconButton

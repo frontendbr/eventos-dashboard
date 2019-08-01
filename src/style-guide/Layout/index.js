@@ -1,6 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import { optionalNode } from 'prop-types'
+import styled from 'styled-components'
 
 const StyledLayout = styled.div`
   height: 100vh;
@@ -18,6 +18,6 @@ Layout.propTypes = {
 }
 
 
-export { Header } from './header'
-export { Content } from './content'
+export { Header } from './Header'
+export { Content } from './Content'
 export default Layout

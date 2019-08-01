@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { string } from 'prop-types'
 
-import LogoSVG from './logo.svg'
+import logo from '@/assets/logo.svg'
 
 const StyledLogo = styled.img`
   max-width:100px;
@@ -11,7 +11,8 @@ const StyledLogo = styled.img`
 const Logo = ({ className }) => (
   <StyledLogo
     className={className}
-    src={LogoSVG} alt='Logo Front-End Brasil'
+    src={logo}
+    alt='Logo Front-End Brasil'
   />
 )
 
@@ -20,4 +21,4 @@ Logo.propTypes = {
   className: string
 }
 
-export { Logo }
+export default Logo

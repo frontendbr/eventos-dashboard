@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { desktop, tablet } from 'utils/breakpoints'
-import { Logo } from 'components'
-import GithubButton from 'components/github-button'
+import { desktop, tablet } from '@/utils/breakpoints'
 
-const StyledAuthenticationPanel = styled.div`
+import { GithubButton, Logo } from '@/components'
+
+const StyledLogin = styled.div`
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
@@ -33,8 +33,8 @@ const StyledWelcome = styled.span`
   color: #9a9a9a;
 `
 
-const AuthenticationPanel = () => (
-  <StyledAuthenticationPanel>
+const Login = () => (
+  <StyledLogin>
     <Logo />
     <StyledTitle>Portal de eventos</StyledTitle>
     <StyledWelcome>
@@ -42,7 +42,7 @@ const AuthenticationPanel = () => (
       Brasil, realize o login para continuar.
     </StyledWelcome>
     <GithubButton primary>Login com github</GithubButton>
-  </StyledAuthenticationPanel>
+  </StyledLogin>
 )
 
-export default AuthenticationPanel
+export default Login
