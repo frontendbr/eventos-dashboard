@@ -1,5 +1,5 @@
 import React from 'react'
-import { boolean, string, node } from 'prop-types'
+import { boolean, string, number, node } from 'prop-types'
 import styled from 'styled-components'
 
 import { Loader } from '@/style-guide'
@@ -19,13 +19,15 @@ const StyledMessage = styled.span`
   color: ${gray};
 `
 
-const IsLoading = ({ loading, message = 'Carregando...', children }) => (
+const IsLoading = ({ loading, message = 'Carregando...', loaderSize, loaderColor, children }) => (
   loading ? (
     <StyledLoading>
-      <Loader />
-      <StyledMessage>
-        {message}
-      </StyledMessage>
+      <Loader size={loaderSize} color={loaderColor} />
+      {message && (
+        <StyledMessage>
+          {message}
+        </StyledMessage>
+      )}
     </StyledLoading>
   ) : children
 )
@@ -33,6 +35,8 @@ const IsLoading = ({ loading, message = 'Carregando...', children }) => (
 IsLoading.propTypes = {
   loading: boolean,
   message: string,
+  loaderSize: number,
+  loaderColor: string,
   children: node
 }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import { desktop, tablet } from '@/utils/breakpoints'
@@ -33,16 +33,41 @@ const StyledWelcome = styled.span`
   color: #9a9a9a;
 `
 
-const Login = () => (
-  <StyledLogin>
-    <Logo />
-    <StyledTitle>Portal de eventos</StyledTitle>
-    <StyledWelcome>
-      Bem vindo, este é o <strong>portal de eventos</strong> do Front-end
-      Brasil, realize o login para continuar.
-    </StyledWelcome>
-    <GithubButton primary>Login com github</GithubButton>
-  </StyledLogin>
-)
+const useAuth = () => {
+  const [isLogging, setLogging] = useState(false)
+
+  const auth = async () => {
+    setLogging(true)
+
+    // TODO: API_CALL
+    setTimeout(() => {
+      setLogging(false)
+    }, 2000)
+  }
+
+  return { auth, isLogging }
+}
+
+const Login = () => {
+  const { auth, isLogging } = useAuth()
+
+  return (
+    <StyledLogin>
+      <Logo />
+      <StyledTitle>Portal de eventos</StyledTitle>
+      <StyledWelcome>
+        Bem vindo, este é o <strong>portal de eventos</strong> do Front-end
+        Brasil, realize o login para continuar.
+      </StyledWelcome>
+      <GithubButton
+        onClick={auth}
+        loading={isLogging}
+        primary
+      >
+        Login com github
+      </GithubButton>
+    </StyledLogin>
+  )
+}
 
 export default Login
