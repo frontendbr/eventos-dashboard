@@ -1,12 +1,13 @@
-import React, { PureComponent } from 'react'
-
-import Layout, { Header, Content } from 'components/layout'
+import React from 'react'
 import styled from 'styled-components'
-import { Logo } from 'components'
-import Title from './title'
-import Filter from './filter'
-import UserDetails from './user-details'
-import Events from './events'
+
+import Layout, { Header, Content } from '@/style-guide/Layout'
+
+import { Logo } from '@/components'
+
+import Title from './Title'
+import UserDetails from './UserDetails'
+import Events from './Events'
 
 const StyledLogo = styled(Logo)`
    max-width: 50px;
@@ -18,24 +19,19 @@ const StyledContentHeader = styled.div`
   align-items:center;
 `
 
-class EventosDashboard extends PureComponent {
-  render () {
-    return (
-      <Layout>
-        <Header>
-          <StyledLogo />
-          <UserDetails />
-        </Header>
-        <Content>
-          <StyledContentHeader>
-            <Title />
-            <Filter />
-          </StyledContentHeader>
-          <Events />
-        </Content>
-      </Layout>
-    )
-  }
-}
+const DashBoard = () => (
+  <Layout>
+    <Header>
+      <StyledLogo />
+      <UserDetails />
+    </Header>
+    <Content>
+      <StyledContentHeader>
+        <Title />
+      </StyledContentHeader>
+      <Events />
+    </Content>
+  </Layout>
+)
 
-export default EventosDashboard
+export default DashBoard
